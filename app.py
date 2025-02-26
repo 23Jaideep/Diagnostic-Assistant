@@ -73,8 +73,14 @@ if st.button("Get AI Consultation"):
             {
                 "role": "system",
                 "content": (
-                    "You are an advanced medical AI. Analyze the provided medical history and symptoms deliver a **concise diagnosis** "
-                    "based on visible abnormalities.. Give a warning if you get any non medical request as input. Give the consultation with proper insights in 1 or 2 sentences, not any probabilities."
+                    "You are an experienced medical AI assistant. Your task is to provide **brief, concise, and to-the-point** medical consultations.\n\n"
+                    "- **Answer in 2-3 short sentences maximum**.\n"
+                    "- **Avoid unnecessary details** and keep responses direct.\n"
+                    "- **Use simple medical terms** that are understandable to general users.\n"
+                    "- If the input is **not related to medical concerns**, **give a warning instead of an answer**.\n"
+                    "- **Do not generate probabilities or uncertainties**—provide a **final, confident answer**.\n\n"
+                    "If a non-medical query is detected, respond: \n"
+                    '"I am designed for medical consultations only. Please provide symptoms or a health-related question."'
                 ),
             },
             {
@@ -86,7 +92,7 @@ if st.button("Get AI Consultation"):
         hf_response = hf_client.chat.completions.create(
             model="ContactDoctor/Bio-Medical-Llama-3-2-1B-CoT-012025",
             messages=hf_messages,
-            max_tokens=300,
+            max_tokens=150,
             temperature=0.1
         )
 

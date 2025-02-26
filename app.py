@@ -73,8 +73,8 @@ if st.button("Get AI Consultation"):
             {
                 "role": "system",
                 "content": (
-                    "You are an experienced medical AI assistant. Provide a **very short** medical consultation based on the given symptoms, medical history, and image diagnosis (if available). Give a warning if the response is irrelevant to a medical symptom of medical condition."
-                    "The response should be as short as possible."
+                    "You are an advanced medical AI. Analyze the provided medical history and symptoms deliver a **concise diagnosis** "
+                    "based on visible abnormalities.. Give a warning if you get any non medical request as input. Give the consultation with proper insights in 1 or 2 sentences, not any probabilities."
                 ),
             },
             {
@@ -86,8 +86,8 @@ if st.button("Get AI Consultation"):
         hf_response = hf_client.chat.completions.create(
             model="ContactDoctor/Bio-Medical-Llama-3-2-1B-CoT-012025",
             messages=hf_messages,
-            max_tokens=400,
-            temperature=0.3
+            max_tokens=300,
+            temperature=0.1
         )
 
         response_text += f"### 📄 Final AI Consultation:\n{hf_response.choices[0].message.content}\n\n"

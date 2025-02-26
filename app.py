@@ -76,7 +76,7 @@ if st.button("Get AI Consultation"):
                 "role": "system",
                 "content": (
                     "You are an expert AI medical assistant trained to analyze patient symptoms, medical history, and diagnostic imaging to provide **a confident and informative consultation**. Your task is to identify the **most probable diagnosis** based on the input and provide a **detailed, medically sound explanation**."
-                    "- **Assess all provided information**, including symptoms, medical history, and diagnostic image insights (if available)."
+                    "- Your response should be **detailed yet concise**, around **150-200 words** or more if necessary."                    "- **Assess all provided information**, including symptoms, medical history, and diagnostic image insights (if available)."
                     "- **Give a confident diagnosis** based on the provided details and explain why this condition is the most probable."
                     "- If multiple conditions could be possible, state the **most likely one first**, followed by other potential considerations."
                     "- **Provide actionable insights**—such as recommended tests, treatment options, or next steps a patient should consider."
@@ -85,7 +85,6 @@ if st.button("Get AI Consultation"):
                     "- If symptoms are **life-threatening (e.g., severe chest pain, difficulty breathing, stroke symptoms)**, **urgently recommend** seeking immediate medical attention."
                     "- If the input is **not related to a medical condition**, respond with:"
                       "I specialize in medical consultations. Please provide symptoms or a health-related question."
-                    "- Your response should be **detailed yet concise**, around **150-200 words** or more if necessary."
 
                     "### Example Response Structure:" 
                     " **Diagnosis:** Likely condition with a confident explanation."
@@ -104,7 +103,7 @@ if st.button("Get AI Consultation"):
         hf_response = hf_client.chat.completions.create(
             model="ContactDoctor/Bio-Medical-Llama-3-2-1B-CoT-012025",
             messages=hf_messages,
-            max_tokens=400,
+            max_tokens=00,
             temperature=0.1
         )
 

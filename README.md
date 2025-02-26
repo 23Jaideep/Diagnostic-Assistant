@@ -26,6 +26,16 @@ Training domain-specific medical AI models requires **significant computational 
 
 ---
 
+## Known Issues
+Due to the use of **free API tiers**, the application may experience **occasional server errors** or **rate limits** while processing requests. If the app fails to generate a response, try:  
+- **Refreshing the page** and re-submitting the request.  
+- **Waiting a few minutes** before retrying (especially for Hugging Face API).  
+- **Reducing request frequency** to avoid hitting rate limits.  
+
+For **more stable performance**, consider using **paid API plans** for Hugging Face and Google AI services.  
+
+---
+
 ##  Features 
  **AI-Powered Symptom-Based Consultation** – Enter symptoms and medical history to receive an AI-generated diagnosis.  
  **Medical Image Analysis** – Upload medical images (X-rays, MRIs, etc.) for AI-driven insights.  

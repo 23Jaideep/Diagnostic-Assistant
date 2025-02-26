@@ -104,7 +104,7 @@ if st.button("Get AI Consultation"):
         hf_response = hf_client.chat.completions.create(
             model="ContactDoctor/Bio-Medical-Llama-3-2-1B-CoT-012025",
             messages=hf_messages,
-            max_tokens=150,
+            max_tokens=400,
             temperature=0.1
         )
 

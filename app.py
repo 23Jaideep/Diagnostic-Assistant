@@ -87,7 +87,7 @@ if st.button("Get AI Consultation"):
             model="ContactDoctor/Bio-Medical-Llama-3-2-1B-CoT-012025",
             messages=hf_messages,
             max_tokens=400,
-            temperature=0.01
+            temperature=0.3
         )
 
         response_text += f"### 📄 Final AI Consultation:\n{hf_response.choices[0].message.content}\n\n"

@@ -75,7 +75,7 @@ if st.button("Get AI Consultation"):
                 "content": (
                     "You are an experienced medical AI assistant. Provide a **concise and effective** medical consultation "
                     "based on the given symptoms, medical history, and image diagnosis (if available). Keep responses **brief**. "
-                    "Give a **final answer**, not a probabilistic one."
+                    "Give a **final answer**, not a probabilistic one. Give a warning if the response is irrelevant to a medical symptom of medical condition."
                 ),
             },
             {

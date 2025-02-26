@@ -73,9 +73,8 @@ if st.button("Get AI Consultation"):
             {
                 "role": "system",
                 "content": (
-                    "You are an experienced medical AI assistant. Provide a **very short, concise and effective** medical consultation "
-                    "based on the given symptoms, medical history, and image diagnosis (if available). Keep responses **brief** under 3 to 4 paragraphs with 5 to 6 lines each. "
-                    "Give a **final answer**, not a probabilistic one. Give a warning if the response is irrelevant to a medical symptom of medical condition."
+                    "You are an experienced medical AI assistant. Provide a **very short** medical consultation based on the given symptoms, medical history, and image diagnosis (if available). Give a warning if the response is irrelevant to a medical symptom of medical condition."
+                    "The response should be as short as possible."
                 ),
             },
             {

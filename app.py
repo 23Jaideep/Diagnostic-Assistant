@@ -21,11 +21,11 @@ st.title("🩺 AI-Powered Medical Consultation")
 st.write("Get medical advice based on your **symptoms (text)** and/or **medical images**.")
 
 # User input for text-based consultation
-symptoms = st.text_area("Describe your symptoms (optional):")
-medical_history = st.text_area("Provide your medical history (optional):")
+symptoms = st.text_area("Describe your symptoms :")
+medical_history = st.text_area("Provide your medical history :")
 
 # File uploader for medical images
-uploaded_file = st.file_uploader("Upload a medical image (X-ray, MRI, etc.) (optional)", type=["jpg", "png", "jpeg"])
+uploaded_file = st.file_uploader("Upload a medical image (X-ray, MRI, etc.) ", type=["jpg", "png", "jpeg"])
 
 # Function for Image-Based Consultation (Gemini 2.0 Flash)
 def analyze_medical_image(image):

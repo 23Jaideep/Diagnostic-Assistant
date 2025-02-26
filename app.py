@@ -18,6 +18,8 @@ hf_client = InferenceClient(
 
 # Streamlit UI
 st.title("🩺 AI-Powered Medical Consultation")
+st.warning("⚠️ **Disclaimer:** This AI-based consultation tool is for informational purposes only and should not be considered a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any medical concerns.")
+
 st.write("Get medical advice based on your **symptoms (text)** and/or **medical images**.")
 
 # User input for text-based consultation
